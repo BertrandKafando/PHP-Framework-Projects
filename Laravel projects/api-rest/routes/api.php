@@ -30,3 +30,6 @@ Route::post('addProduct',[ProductController::class,'addProduct']);
 
 //upddate product by id
 Route::put('updateProduct/{id}',[ProductController::class,'updateProduct']);
+
+//delete product by id
+Route::delete('deleteProduct/{id}',[ProductController::class,'deleteProduct']);

@@ -40,4 +40,16 @@ class ProductController extends Controller
     return response($product,200);
 }
 
+//delete Product
+
+public function deleteProduct($id){
+    $product=Product::find($id);
+    if(is_null($product)){
+        return response()->json(['message' => 'Produit introuvable'],404);
+    }
+    $product->delete();
+    return response(null,204);
+    
+}
+
 }
